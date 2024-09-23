@@ -1,0 +1,28 @@
+{
+  "name": "vp2",
+  "version": "1.0.0",
+  "description": "Veebiprogrammeerimise rühm 2 express.js rakendus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://agetoomet@github.com/agetoomet/vp2.git"
+  },
+  "keywords": [
+    "Veebiprogrammeerimine",
+    "Node.js",
+    "Tallinna",
+    "ülikool"
+  ],
+  "author": "Age Toomet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agetoomet/vp2/issues"
+  },
+  "homepage": "https://github.com/agetoomet/vp2#readme", 
+  "dependencies": {
+    "express": "~4.16.1"
+  }
+}
