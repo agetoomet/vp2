@@ -1,0 +1,3 @@
+külastuste logi
+
+CREATE TABLE `if24_age_to`.`vp2visitlog` (`id` INT(11) NOT NULL AUTO_INCREMENT , `first_name` VARCHAR(50) NOT NULL , `last_name` VARCHAR(50) NOT NULL , `visit_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;

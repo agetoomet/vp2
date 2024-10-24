@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+	<title>Age Toomet</title>
+	<script src="first.js" defer></script>
+	<script src="class_2.js" defer></script>
+</head>
+<body>
+  <img src="images/vp_banner_2024.png" alt="veebiprogrameerimise 2024 aasta kursuse bänner">
+	<h1>Age Toomet</h1>
+	<p>Lehe külastamine omal vastutusel!</p>
+	<p>See leht on loodud õppetöö raames <a href="https://www.tlu.ee">Tallinna ülikoolis</a>, Digitehnoloogiate instituudis ja ei sisalda tõsiseltvõetavat materjali!</p>
+	<hr>
+	<ul>
+		<li><a href="/">Avalehele</a></li>
+		<a href="/visitlog">Registreeritud külastused</a>
+	</ul>
+	<hr>
+	<h2>Registreeri oma külastus sellele veebilehele (tekstifaili)</h2>
+	<form method="POST">
+		<label for="firstNameInput">Sisesta oma eesnimi:</label>
+		<input id="firstNameInput" type="text" name="firstNameInput" placeholder="Eesnimi...">
+		<br>
+		<label for="lastNameInput">Sisesta oma perekonnanimi:</label>
+		<input id="lastNameInput" type="text" name="lastNameInput" placeholder="Perekonnanimi...">
+		<br>
+		<input id="regSubmit" type="submit" name="regSubmit" value="Salvesta">
+	</form>
+	<hr>
+	<h3>Selle lehe avamise hetkel oli:</h3>
+	<ul>
+		<li>Nädalapäev: <%= nowWD || "andmed puuduvad" %></li>
+		<li>Kuupäev: <%= nowD || "andmed puuduvad" %></li>
+		<li>Kellaaeg: <%= nowT || "andmed puuduvad" %></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+	<title>Age Toomet</title>
+	<script src="first.js" defer></script>
+	<script src="class_2.js" defer></script>
+</head>
+<body>
+  <img src="images/vp_banner_2024.png" alt="veebiprogrameerimise 2024 aasta kursuse bänner">
+	<h1>Age Toomet</h1>
+	<p>Lehe külastamine omal vastutusel!</p>
+	<p>See leht on loodud õppetöö raames <a href="https://www.tlu.ee">Tallinna ülikoolis</a>, Digitehnoloogiate instituudis ja ei sisalda tõsiseltvõetavat materjali!</p>
+	<hr>
+	<h2>Eesti filmid</h2>
+	<ul>
+		<li><a href="/">Avalehele</a></li>
+		<li><a href="/eestifilm/">Eesti film</a></li>
+	</ul>	
+	<hr>
+	<ul>
+		<% persons.forEach(function(item){ %>
+		<li><%= item.first_name %> <%= item.last_name %>, sündinud: <%= item.birth_date %></li>
+		<% }); %>
+	</ul>
+	<hr>
+</body>
+</html>
