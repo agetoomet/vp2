@@ -143,20 +143,22 @@ app.post("/regvisitdb", (req, res)=>{
 	}
 });	
 
-app.get("/regvisitdb", (req, res)=>{
+app.get("/visitlogdb", (req, res)=>{
+	//console.log("Route /visitlogdb accessed");
 	//loon andmebaasi päringu
-	let sqlReq = "SELECT first_name, last_name, visit_date FROM person";
+	let sqlReq = "SELECT first_name, last_name, visit_date FROM vp2visitlog";
 	conn.query(sqlReq, (err, sqlRes)=>{
 		if (err){
-			res.render("/regvisitdb",{persons: []});
+			//console.error("Database query error:", err);
+			res.render("visitlogdb",{listData: []});
 			//throw err;
 		}
 		else{
 			//console.log(sqlRes);
-			res.render("/regvisitdb",{persons: sqlRes});
+			res.render("visitlogdb",{listData: sqlRes});
 		}
 	});
-	//res.render("/regvisitdb");
+	//res.render("regvisitdb");
 });
 
 app.get("/eestifilm", (req, res)=>{

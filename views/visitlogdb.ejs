@@ -21,7 +21,7 @@
 	<ul>
         <% if (listData && listData.length > 0) { %>
             <% listData.forEach(function(entry) { %>
-                <li><%= entry %></li>
+                <li><%= entry.first_name %> <%= entry.last_name %>, külastas: <%= entry.visit_date %></li>
             <% }); %>
         <% } else { %>
             <li>Ei ole registreeritud külastusi!</li>
