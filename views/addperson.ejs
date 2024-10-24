@@ -14,22 +14,33 @@
 	<hr>
 	<ul>
 		<li><a href="/">Avalehele</a></li>
-		<a href="/visitlog">Registreeritud külastused</a>
+		<li><a href="/tegelased">Eesti filmitegelased</a></li>
 	</ul>
 	<hr>
-	<h2>Lisa filmitegelane</h2>
+	<h2>Lisa andmeid</h2>
 	<form method="POST">
-		<label for="firstNameInput">Sisesta oma eesnimi:</label>
-		<input id="firstNameInput" type="text" name="firstNameInput" placeholder="Eesnimi..." > 
+		<label for="firstNameInput">Sisesta tegelase eesnimi:</label>
+		<input id="firstNameInput" type="text" name="firstNameInput" placeholder="Eesnimi..."> 
 		<br>
-		<label for="lastNameInput">Sisesta oma perekonnanimi:</label>
+		<label for="lastNameInput">Sisesta tegelase perekonnanimi:</label>
 		<input id="lastNameInput" type="text" name="lastNameInput" placeholder="Perekonnanimi...">
 		<br>
 		<label for="birthDateInput">Sisesta sünnikuupäev:</label>
-		<input type="date" id="birthDateInput" name="birthDateInput">
-		<input type="submit" id="regSubmit" name="regSubmit" value="Salvesta">
+		<input id="birthDateInput" type="date" name="birthDateInput"> 
+		<input type="submit" id="personSubmit" name="personSubmit" value="Salvesta tegelane">
 	</form>
-	
+	<hr>
+	<form method="POST">
+		<label for="filmInput">Sisesta filmi nimi:</label>
+		<input id="filmInput" type="text" name="filmInput">
+		<input type="submit" id="filmSubmit" name="filmSubmit" value="Salvesta film">	
+	</form>
+	<hr>
+	<form method="POST">
+		<label for="roleInput">Sisesta inimese roll:</label>
+		<input id="roleInput" type="text" name="roleInput">
+		<input type="submit" id="roleSubmit" name="roleSubmit" value="Salvesta roll">
+	</form>
 	<hr>
 </body>
 </html>

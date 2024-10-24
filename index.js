@@ -102,7 +102,7 @@ app.get("/visitlog", (req, res) => {
         }
         
         const visits = data.trim().split("\n").filter(entry => entry.length > 0);
-		console.log("Külastuste logi:", visits); // Logige külastuste andmed konsooli
+		//console.log("Külastuste logi:", visits); // Logige külastuste andmed konsooli
         res.render("justlist", { h2: "Registreeritud külastajad", listData: visits });
     });
 });
@@ -181,8 +181,32 @@ app.get("/eestifilm/tegelased", (req, res)=>{
 	//res.render("tegelased");
 });
 
-app.get("/eestifilm/lisa", (req, res)=>{
+app.get("/eestifilm/addperson", (req, res)=>{
 	res.render("addperson");
+});
+
+app.post("/eestifilm/addperson", (req, res)=>{
+	let notice = "";
+	
+	if (req.body.filmSubmit){
+		const filmName = req.body.filmInput;
+        console.log("Lisati film:", filmName);
+        notice = `Lisati film: ${filmName}`;
+
+	}
+	else if (req.body.roleSubmit){
+		const roleName = req.body.roleInput;
+        console.log("Lisati roll:", roleName);
+        notice = `Lisati roll: ${roleName}`;
+	}
+	else {
+		const firstName = req.body.firstNameInput;
+        const lastName = req.body.lastNameInput;    
+        console.log("Lisati filmitegelane:", firstName, lastName);
+        notice = `Lisati filmitegelane: ${firstName} ${lastName}`;
+	}
+	return res.render("addperson", {notice: notice});
+	
 });
 
 
