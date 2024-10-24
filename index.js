@@ -143,6 +143,22 @@ app.post("/regvisitdb", (req, res)=>{
 	}
 });	
 
+app.get("/regvisitdb", (req, res)=>{
+	//loon andmebaasi päringu
+	let sqlReq = "SELECT first_name, last_name, visit_date FROM person";
+	conn.query(sqlReq, (err, sqlRes)=>{
+		if (err){
+			res.render("/regvisitdb",{persons: []});
+			//throw err;
+		}
+		else{
+			//console.log(sqlRes);
+			res.render("/regvisitdb",{persons: sqlRes});
+		}
+	});
+	//res.render("/regvisitdb");
+});
+
 app.get("/eestifilm", (req, res)=>{
 	res.render("eestifilm");
 });
