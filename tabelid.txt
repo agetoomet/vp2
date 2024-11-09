@@ -1,3 +1,9 @@
 külastuste logi
 
 CREATE TABLE `if24_age_to`.`vp2visitlog` (`id` INT(11) NOT NULL AUTO_INCREMENT , `first_name` VARCHAR(50) NOT NULL , `last_name` VARCHAR(50) NOT NULL , `visit_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+fotod
+CREATE TABLE `if24_age_to`.`vp2photos` (`id` INT(11) NOT NULL AUTO_INCREMENT , `file_name` VARCHAR(140) NOT NULL , `orig_name` VARCHAR(140) NOT NULL , `alt_text` VARCHAR(256) NULL , `privacy` INT(1) NOT NULL , `user_id` INT(11) NOT NULL , `added` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `deleted` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+kasutajad
+CREATE TABLE `if24_age_to`.`vp2users` (`id` INT(11) NOT NULL AUTO_INCREMENT , `first_name` VARCHAR(50) NOT NULL , `last_name` VARCHAR(50) NOT NULL , `birth_date` DATE NOT NULL , `gender` INT(1) NOT NULL , `email` VARCHAR(100) NOT NULL , `password` VARCHAR(60) NOT NULL , `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;

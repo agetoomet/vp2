@@ -12,17 +12,15 @@
 	<p>Lehe külastamine omal vastutusel!</p>
 	<p>See leht on loodud õppetöö raames <a href="https://www.tlu.ee">Tallinna ülikoolis</a>, Digitehnoloogiate instituudis ja ei sisalda tõsiseltvõetavat materjali!</p>
 	<hr>
-	<h2>Eesti filmid</h2>
 	<ul>
 		<li><a href="/home">Avalehele</a></li>
-		<li><a href="/eestifilm/">Eesti film</a></li>
-	</ul>	
-	<hr>
-	<ul>
-		<% persons.forEach(function(item){ %>
-		<li><%= item.first_name %> <%= item.last_name %>, sündinud: <%= item.birth_date %></li>
-		<% }); %>
+		<li><a href="/photoupload">Galeriifotode üleslaadimine</a></li>
 	</ul>
 	<hr>
+	<h2>Fotogalerii</h2>
+        <% listData.forEach(function(image) { %>
+		<img src="<%= image.href %>" alt= "<%= image.alt %>">
+        <% }); %>
+    <hr>
 </body>
-</html>
+</html>	
