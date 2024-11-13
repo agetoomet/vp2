@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Age Toomet</title>
-	<script src="first.js" defer></script>
-	<script src="class_2.js" defer></script>
+	<link rel="stylesheet" href="/style/gallery.css">
+	<link rel="stylesheet" href="/style/modal.css">
+	<script src="/script/gallery.js" defer></script>
 </head>
 <body>
 	<img src="images/vp_banner_2024.png" alt="veebiprogrameerimise 2024 aasta kursuse bänner">
@@ -17,10 +18,20 @@
 		<li><a href="/photoupload">Galeriifotode üleslaadimine</a></li>
 	</ul>
 	<hr>
+	<dialog id="modal" class="modalarea">
+		<span id="modalClose" class="modalclose">&times;</span>
+		<div class="modalhorizontal">
+			<div class= "modavertical">
+				<p id="modalCaption"></p>
+				<img id="modalImage" src="/pics/empty.png" alt="galeriipilt">
+			</div>
+		</div>
+	</dialog>
 	<h2>Fotogalerii</h2>
+	<div class="gallery">
         <% listData.forEach(function(image) { %>
-		<img src="<%= image.href %>" alt= "<%= image.alt %>">
+		<img src="<%= image.href %><%= image.filename %>" alt= "<%= image.alt %>" data-filename="<%= image.filename %>" data_id = "<%= image.id %>" class= "thumbs">
         <% }); %>
-    <hr>
+    </div>
 </body>
 </html>	

@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Age Toomet</title>
-	<script src="first.js" defer></script>
-	<script src="class_2.js" defer></script>
 </head>
 <body>
 	<img src="images/vp_banner_2024.png" alt="veebiprogrameerimise 2024 aasta kursuse bänner">
@@ -20,7 +18,7 @@
 	<hr>
 	<ul>
 		<% persons.forEach(function(item){ %>
-		<li><%= item.first_name %> <%= item.last_name %>, sündinud: <%= item.birth_date %></li>
+		<li><%= item.first_name %> <%= item.last_name %>, sündinud: <%= item.birth_date %>, <a href="/eestifilm/personrelations/<%= item.id %>">Vaata seoseid</a></li>
 		<% }); %>
 	</ul>
 	<hr>

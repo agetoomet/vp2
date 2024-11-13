@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+	<title>Age Toomet</title>
+</head>
+<body>
+	<img src="images/vp_banner_2024.png" alt="veebiprogrameerimise 2024 aasta kursuse bänner">
+	<h1>Age Toomet</h1>
+	<p>Lehe külastamine omal vastutusel!</p>
+	<p>See leht on loodud õppetöö raames <a href="https://www.tlu.ee">Tallinna ülikoolis</a>, Digitehnoloogiate instituudis ja ei sisalda tõsiseltvõetavat materjali!</p>
+	<hr>
+	<ul>
+		<li><a href="/home">Avalehele</a></li>
+		<li><a href="/eestifilm/tegelased">Eesti filmitegelased</a></li>
+	</ul>
+	<hr>
+	<h2>Lisa filmitegelaste seoseid</h2>
+	<form method="POST">
+		<label for="personSelect">Filmitegelane:</label>
+		<br>
+		<select id="personSelect" name="personSelect">
+			<option selected disabled>Vali tegelane</option>
+			<% personList.forEach(function(person){%>
+				<option value= "<%= person.id %>"><%= person.first_name %> <%= person.last_name %>, sünd. <%= person.birth_date %></option>
+			<% }); %>
+		</select>
+		<br>
+		<label for="movieSelect">Film:</label>
+		<br>
+		<select id="movieSelect" name="movieSelect">
+			<option selected disabled>Vali film</option>
+			<% movieList.forEach(function(movie){%>
+				<option value= "<%= movie.id %>"><%= movie.title %>, toodetud. <%= movie.production_year %></option>
+			<% }); %>
+		</select>
+		<br>
+		<label for="movieSelect">Roll/amet:</label>
+		<br>
+		<select id="positionSelect" name="positionSelect">
+			<option selected disabled>Vali roll/amet</option>
+			<% positionList.forEach(function(position){%>
+				<option value= "<%= position.id %>"><%= position.position_name %></option>
+			<% }); %>
+		</select>
+			<label for= "roleInput">Roll/tegelaskuju (kui on näitleja)</label>
+			<input type="text" id="roleInput" name= "roleInput" placeholder="Tegelaskuju...">
+		<br>
+		<input type="submit" id="relatinSubmit" name="relationSubmit" value="Salvesta">
+	</form>
+	<hr>
+</body>
+</html>
